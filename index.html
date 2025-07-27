@@ -20,30 +20,30 @@
 <body class="bg-white">
     <div class="custom-cursor hidden md:block"></div>
 
-   <!-- Navigation -->
+  <!-- Navigation -->
 <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-sm z-50 py-4 backdrop-blur-sm">
   <div class="container mx-auto px-6 flex justify-between items-center">
-    <a href="#home" class="font-['Pacifico'] text-3xl text-primary">NovaWeb</a>
+    <a href="#home" class="font-['Pacifico'] text-3xl text-primary" data-i18n="nav.brand">NovaWeb</a>
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex items-center space-x-8">
-      <a href="#home" class="nav-link text-gray-800 hover:text-primary transition-colors">Home</a>
-      <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors">About</a>
-      <a href="#works" class="nav-link text-gray-800 hover:text-primary transition-colors">Works</a>
-      <a href="#certifications" class="nav-link text-gray-800 hover:text-primary transition-colors">Certifications</a>
-      <a href="#blog" class="nav-link text-gray-800 hover:text-primary transition-colors">Blog</a>
-      <a href="#contact" class="ml-4 px-6 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Contact</a>
+      <a href="#home" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.home">Home</a>
+      <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.about">About</a>
+      <a href="#works" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.works">Works</a>
+      <a href="#certifications" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.certifications">Certifications</a>
+      <a href="#blog" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.blog">Blog</a>
+      <a href="#contact" class="ml-4 px-6 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap" data-i18n="nav.contact">Contact</a>
 
       <!-- Language Toggle -->
       <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full shadow-md">
-        <button class="language-toggle active text-primary font-medium" data-lang="en">EN</button>
+        <button class="language-toggle active text-primary font-medium" data-lang="en" data-i18n="lang.en">EN</button>
         <span class="text-gray-400">|</span>
-        <button class="language-toggle text-gray-400" data-lang="az">AZ</button>
+        <button class="language-toggle text-gray-400" data-lang="az" data-i18n="lang.az">AZ</button>
       </div>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800 relative z-50" id="mobile-menu-button">
+    <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800 relative z-50" id="mobile-menu-button" aria-label="Toggle menu">
       <i class="ri-menu-line ri-lg" id="menu-icon"></i>
     </button>
   </div>
@@ -51,22 +51,23 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white w-full fixed top-0 left-0 h-screen pt-20 shadow-md transform translate-x-full transition-transform duration-300 ease-in-out">
     <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-      <a href="#home" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Home</a>
-      <a href="#about" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">About</a>
-      <a href="#works" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Works</a>
-      <a href="#certifications" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Certifications</a>
-      <a href="#blog" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Blog</a>
-      <a href="#contact" class="inline-block px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap text-lg mt-4">Contact</a>
+      <a href="#home" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.home">Home</a>
+      <a href="#about" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.about">About</a>
+      <a href="#works" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.works">Works</a>
+      <a href="#certifications" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.certifications">Certifications</a>
+      <a href="#blog" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.blog">Blog</a>
+      <a href="#contact" class="inline-block px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap text-lg mt-4" data-i18n="nav.contact">Contact</a>
 
       <!-- Mobile Language Toggle -->
       <div class="flex justify-center items-center space-x-2 mt-6 bg-white px-3 py-1 rounded-full shadow-md">
-        <button class="language-toggle active text-primary font-medium" data-lang="en">EN</button>
+        <button class="language-toggle active text-primary font-medium" data-lang="en" data-i18n="lang.en">EN</button>
         <span class="text-gray-400">|</span>
-        <button class="language-toggle text-gray-400" data-lang="az">AZ</button>
+        <button class="language-toggle text-gray-400" data-lang="az" data-i18n="lang.az">AZ</button>
       </div>
     </div>
   </div>
 </nav>
+
         
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white w-full fixed top-0 left-0 h-screen pt-20 shadow-md transform translate-x-full transition-transform duration-300 ease-in-out">
@@ -1085,44 +1086,45 @@
 
     <script id="animations-script">
         document.addEventListener('DOMContentLoaded', function() {
-            // Typing animation
-            const typingElement = document.getElementById('typing-text');
-            const phrases = {
-                en: ['Creating Digital Experiences', 'Building Innovative Websites', 'Crafting Stunning Designs', 'Developing Custom Solutions'],
-                az: ['Rəqəmsal Təcrübələrin Yaradılması', 'İnnovativ veb saytların qurulması', 'Çarpıcı Dizaynların Yaradılması', 'Fərdi Həllərin İnkişafı']
-            };
-            let currentLang = 'en';
-            let phraseIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            let typingSpeed = 100;
-            
-            function typeText() {
-                const currentPhrase = phrases[currentLang][phraseIndex];
-                
-                if (isDeleting) {
-                    typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                    charIndex--;
-                    typingSpeed = 50;
-                } else {
-                    typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                    charIndex++;
-                    typingSpeed = 100;
-                }
-                
-                if (!isDeleting && charIndex === currentPhrase.length) {
-                    isDeleting = true;
-                    typingSpeed = 1500; // Pause at end of phrase
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases[currentLang].length;
-                    typingSpeed = 500; // Pause before typing next phrase
-                }
-                
-                setTimeout(typeText, typingSpeed);
-            }
-            
-            typeText();
+    const typingElement = document.getElementById('typing-text');
+    const phrases = {
+        en: ['Creating Digital Experiences', 'Building Innovative Websites', 'Crafting Stunning Designs', 'Developing Custom Solutions'],
+        az: ['Rəqəmsal Təcrübələrin Yaradılması', 'İnnovativ veb saytların qurulması', 'Çarpıcı Dizaynların Yaradılması', 'Fərdi Həllərin İnkişafı']
+    };
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function typeText() {
+        // Burada localStorage-dan cari dili oxuyuruq
+        const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+        const currentPhrase = phrases[currentLang][phraseIndex];
+
+        if (isDeleting) {
+            typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 50;
+        } else {
+            typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true;
+            typingSpeed = 1500; // Pause at end of phrase
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases[currentLang].length;
+            typingSpeed = 500; // Pause before typing next phrase
+        }
+
+        setTimeout(typeText, typingSpeed);
+    }
+
+    typeText();
             
             // Fade-in animations on scroll
             const fadeElements = document.querySelectorAll('.fade-in');
