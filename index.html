@@ -14,38 +14,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white">
     <div class="custom-cursor hidden md:block"></div>
 
-    <!-- Language Toggle Button -->
-<div class="fixed top-4 right-4 z-50">
-    <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full shadow-md">
+   <!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-sm z-50 py-4 backdrop-blur-sm">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <a href="#home" class="font-['Pacifico'] text-3xl text-primary">NovaWeb</a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#home" class="nav-link text-gray-800 hover:text-primary transition-colors">Home</a>
+      <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors">About</a>
+      <a href="#works" class="nav-link text-gray-800 hover:text-primary transition-colors">Works</a>
+      <a href="#certifications" class="nav-link text-gray-800 hover:text-primary transition-colors">Certifications</a>
+      <a href="#blog" class="nav-link text-gray-800 hover:text-primary transition-colors">Blog</a>
+      <a href="#contact" class="ml-4 px-6 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Contact</a>
+
+      <!-- Language Toggle -->
+      <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full shadow-md">
         <button class="language-toggle active text-primary font-medium" data-lang="en">EN</button>
         <span class="text-gray-400">|</span>
         <button class="language-toggle text-gray-400" data-lang="az">AZ</button>
+      </div>
     </div>
-</div>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-sm z-50 py-4 backdrop-blur-sm">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#home" class="font-['Pacifico'] text-3xl text-primary">NovaWeb</a>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.home">Home</a>
-                <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.about">About</a>
-                <a href="#works" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.works">Works</a>
-                <a href="#certifications" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.certifications">Certifications</a>
-                <a href="#blog" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.blog">Blog</a>
-                <a href="#contact" class="ml-4 px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap" data-i18n="nav.contact">Contact</a>
-            </div>
-            
-            <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800 relative z-50" id="mobile-menu-button">
-                <i class="ri-menu-line ri-lg" id="menu-icon"></i>
-            </button>
-        </div>
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800 relative z-50" id="mobile-menu-button">
+      <i class="ri-menu-line ri-lg" id="menu-icon"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white w-full fixed top-0 left-0 h-screen pt-20 shadow-md transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+      <a href="#home" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Home</a>
+      <a href="#about" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">About</a>
+      <a href="#works" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Works</a>
+      <a href="#certifications" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Certifications</a>
+      <a href="#blog" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Blog</a>
+      <a href="#contact" class="inline-block px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap text-lg mt-4">Contact</a>
+
+      <!-- Mobile Language Toggle -->
+      <div class="flex justify-center items-center space-x-2 mt-6 bg-white px-3 py-1 rounded-full shadow-md">
+        <button class="language-toggle active text-primary font-medium" data-lang="en">EN</button>
+        <span class="text-gray-400">|</span>
+        <button class="language-toggle text-gray-400" data-lang="az">AZ</button>
+      </div>
+    </div>
+  </div>
+</nav>
         
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white w-full fixed top-0 left-0 h-screen pt-20 shadow-md transform translate-x-full transition-transform duration-300 ease-in-out">
@@ -1008,59 +1029,59 @@
     <!-- Scripts -->
     <script id="navigation-script">
         document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-                mobileMenu.classList.toggle('translate-x-0');
-                
-                if (mobileMenu.classList.contains('translate-x-0')) {
-                    menuIcon.classList.remove('ri-menu-line');
-                    menuIcon.classList.add('ri-close-line');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    menuIcon.classList.remove('ri-close-line');
-                    menuIcon.classList.add('ri-menu-line');
-                    document.body.style.overflow = '';
-                }
+          const mobileMenuButton = document.getElementById('mobile-menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const menuIcon = document.getElementById('menu-icon');
+        
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('translate-x-0');
+        
+            if (mobileMenu.classList.contains('translate-x-0')) {
+              menuIcon.classList.remove('ri-menu-line');
+              menuIcon.classList.add('ri-close-line');
+              document.body.style.overflow = 'hidden';
+            } else {
+              menuIcon.classList.remove('ri-close-line');
+              menuIcon.classList.add('ri-menu-line');
+              document.body.style.overflow = '';
+            }
+          });
+        
+          // Close mobile menu when clicking on a link
+          const mobileLinks = mobileMenu.querySelectorAll('a');
+          mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              mobileMenu.classList.add('hidden');
+              mobileMenu.classList.remove('translate-x-0');
+              menuIcon.classList.remove('ri-close-line');
+              menuIcon.classList.add('ri-menu-line');
+              document.body.style.overflow = '';
             });
-            
-            // Close mobile menu when clicking on a link
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('translate-x-0');
-                    menuIcon.classList.remove('ri-close-line');
-                    menuIcon.classList.add('ri-menu-line');
-                    document.body.style.overflow = '';
+          });
+        
+          // Smooth scrolling for navigation links
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+        
+              const targetId = this.getAttribute('href');
+              const targetElement = document.querySelector(targetId);
+        
+              if (targetElement) {
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
                 });
+              }
             });
-            
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        const headerOffset = 80;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                        
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+          });
         });
-    </script>
+        </script>
 
     <script id="animations-script">
         document.addEventListener('DOMContentLoaded', function() {
