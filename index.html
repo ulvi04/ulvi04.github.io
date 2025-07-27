@@ -1357,59 +1357,63 @@
             }
         });
     </script>
-
-    <!-- Language Toggle Script -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const languageToggles = document.querySelectorAll('.language-toggle');
-        let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggles = document.querySelectorAll('.language-toggle');
+            let currentLang = localStorage.getItem('preferredLanguage') || 'en';
         
-        // Load language function
-        function loadLanguage(lang) {
-            currentLang = lang;
-            
-            // Update all translatable elements
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) el.textContent = translations[lang][key];
-            });
-            
-            // Update all placeholder texts
-            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                const key = el.getAttribute('data-i18n-placeholder');
-                if (translations[lang][key]) el.setAttribute('placeholder', translations[lang][key]);
-            });
-            
-            // Update active toggle button
+            function loadLanguage(lang) {
+                currentLang = lang;
+        
+                // Metinleri değiştir
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (typeof translations !== 'undefined' && translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+        
+                // Placeholder metinlerini değiştir
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-placeholder');
+                    if (typeof translations !== 'undefined' && translations[lang] && translations[lang][key]) {
+                        el.setAttribute('placeholder', translations[lang][key]);
+                    }
+                });
+        
+                // Dil butonlarının aktif/pasif durumunu ayarla
+                languageToggles.forEach(toggle => {
+                    if (toggle.getAttribute('data-lang') === lang) {
+                        toggle.classList.add('active', 'text-primary', 'font-medium');
+                        toggle.classList.remove('text-gray-400');
+                    } else {
+                        toggle.classList.remove('active', 'text-primary', 'font-medium');
+                        toggle.classList.add('text-gray-400');
+                    }
+                });
+        
+                // HTML lang attribute güncelle
+                document.documentElement.lang = lang;
+        
+                // Tercihi localStorage’a kaydet
+                localStorage.setItem('preferredLanguage', lang);
+            }
+        
+            // Sayfa yüklendiğinde seçili dili uygula
+            loadLanguage(currentLang);
+        
+            // Dil değiştirme butonlarına event ata
             languageToggles.forEach(toggle => {
-                if (toggle.getAttribute('data-lang') === lang) {
-                    toggle.classList.add('active', 'text-primary', 'font-medium');
-                    toggle.classList.remove('text-gray-400');
-                } else {
-                    toggle.classList.remove('active', 'text-primary', 'font-medium');
-                    toggle.classList.add('text-gray-400');
-                }
-            });
-            
-            // Update HTML lang attribute
-            document.documentElement.lang = lang;
-            
-            // Save preference
-            localStorage.setItem('preferredLanguage', lang);
-        }
-        
-        // Initialize
-        loadLanguage(currentLang);
-        
-        // Toggle click handlers
-        languageToggles.forEach(toggle => {
-            toggle.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                if (lang !== currentLang) loadLanguage(lang);
+                toggle.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    if (lang !== currentLang) {
+                        loadLanguage(lang);
+                    }
+                });
             });
         });
-    });
-</script>
-
+    </script>
+    
 </body>
 </html>
