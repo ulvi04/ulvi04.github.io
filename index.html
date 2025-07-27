@@ -18,18 +18,27 @@
 <body class="bg-white">
     <div class="custom-cursor hidden md:block"></div>
 
+    <!-- Language Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <div class="flex items-center space-x-2 bg-white px-3 py-1 rounded-full shadow-md">
+            <button class="language-toggle active" data-lang="en">EN</button>
+            <span class="text-gray-400">|</span>
+            <button class="language-toggle" data-lang="az">AZ</button>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-sm z-50 py-4 backdrop-blur-sm">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="#home" class="font-['Pacifico'] text-3xl text-primary">NovaWeb</a>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="nav-link text-gray-800 hover:text-primary transition-colors">Ana səhifə</a>
-                <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors">Haqqımızda</a>
-                <a href="#works" class="nav-link text-gray-800 hover:text-primary transition-colors">İşlərimiz</a>
-                <a href="#certifications" class="nav-link text-gray-800 hover:text-primary transition-colors">Sertifikasiyalar</a>
-                <a href="#blog" class="nav-link text-gray-800 hover:text-primary transition-colors">Blog</a>
-                <a href="#contact" class="ml-4 px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Əlaqə</a>
+                <a href="#home" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.home">Home</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.about">About</a>
+                <a href="#works" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.works">Works</a>
+                <a href="#certifications" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.certifications">Certifications</a>
+                <a href="#blog" class="nav-link text-gray-800 hover:text-primary transition-colors" data-i18n="nav.blog">Blog</a>
+                <a href="#contact" class="ml-4 px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap" data-i18n="nav.contact">Contact</a>
             </div>
             
             <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800 relative z-50" id="mobile-menu-button">
@@ -40,12 +49,12 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white w-full fixed top-0 left-0 h-screen pt-20 shadow-md transform translate-x-full transition-transform duration-300 ease-in-out">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-                <a href="#home" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Ana Səhifə</a>
-                <a href="#about" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Haqqımızda</a>
-                <a href="#works" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">İşlərimiz</a>
-                <a href="#certifications" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Sertifikasiyalar</a>
-                <a href="#blog" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg">Blog</a>
-                <a href="#contact" class="inline-block px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap text-lg mt-4">Sertifikasiyalar</a>
+                <a href="#home" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.home">Home</a>
+                <a href="#about" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.about">About</a>
+                <a href="#works" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.works">Works</a>
+                <a href="#certifications" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.certifications">Certifications</a>
+                <a href="#blog" class="text-gray-800 hover:text-primary transition-colors py-3 text-lg" data-i18n="nav.blog">Blog</a>
+                <a href="#contact" class="inline-block px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap text-lg mt-4" data-i18n="nav.contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -59,12 +68,12 @@
                 <div class="fade-in">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                         <span class="font-['Pacifico'] text-primary">NovaWeb</span>
-                        <div class="mt-4 typing-animation" id="typing-text">Rəqəmsal Təcrübələrin Yaradılması</div>
+                        <div class="mt-4 typing-animation" id="typing-text" data-i18n="hero.title">Creating Digital Experiences</div>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-200 mb-8">Biz ideyaları müstəsna veb təcrübələrinə çeviririk. Mütəxəssislərdən ibarət komandamız diqqət çəkən vebsaytlar yaratmaq üçün yaradıcılığı və texnologiyanı birləşdirir.</p>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8" data-i18n="hero.subtitle">We transform ideas into exceptional web experiences. Our team of experts combines creativity and technology to create stunning websites that stand out.</p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#works" class="px-6 md:px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-all transform hover:-translate-y-1 whitespace-nowrap">İşimizə Baxın</a>
-                        <a href="#contact" class="px-6 md:px-8 py-3 bg-transparent border-2 border-white text-white !rounded-button hover:bg-white/10 transition-all transform hover:-translate-y-1 whitespace-nowrap">Əlaqə saxlayın</a>
+                        <a href="#works" class="px-6 md:px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-all transform hover:-translate-y-1 whitespace-nowrap" data-i18n="hero.button1">View Our Work</a>
+                        <a href="#contact" class="px-6 md:px-8 py-3 bg-transparent border-2 border-white text-white !rounded-button hover:bg-white/10 transition-all transform hover:-translate-y-1 whitespace-nowrap" data-i18n="hero.button2">Get in Touch</a>
                     </div>
                 </div>
                 
@@ -88,8 +97,8 @@
     <section id="about" class="py-16 md:py-20 bg-gray-50 relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 md:mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Biz Kimik</h2>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">2020-ci ildən bəri innovativ rəqəmsal həllər yaradan ehtiraslı dizaynerlər və tərtibatçılar.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="about.title">Who We Are</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="about.subtitle">Passionate designers and developers creating innovative digital solutions since 2020.</p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center about-grid">
@@ -102,7 +111,7 @@
                         >
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                             <div class="p-6">
-                                <p class="text-white font-medium">Yaradıcı beyinlərdən ibarət komandamız birlikdə işləyir</p>
+                                <p class="text-white font-medium" data-i18n="about.image_caption">Our creative team working together</p>
                             </div>
                         </div>
                     </div>
@@ -114,7 +123,7 @@
                             </div>
                             <div>
                                 <div class="text-2xl font-bold" id="client-counter">0</div>
-                                <div class="text-sm">Xoşbəxt Müştərilər</div>
+                                <div class="text-sm" data-i18n="about.happy_clients">Happy Clients</div>
                             </div>
                         </div>
                     </div>
@@ -126,50 +135,49 @@
                             </div>
                             <div>
                                 <div class="text-2xl font-bold" id="project-counter">0</div>
-                                <div class="text-sm">Tamamlanmış Layihələr</div>
+                                <div class="text-sm" data-i18n="about.completed_projects">Completed Projects</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="fade-in">
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Bizim Hekayəmiz</h3>
-                    <p class="text-gray-700 mb-6">NovaWeb 2020-ci ildə yaradılıb və fəaliyyətinə istedadlı dizaynerlərdən ibarət kiçik bir komanda kimi başlayıb. Məqsədimiz – istisna rəqəmsal təcrübələr yaratmaq idi. Bu gün isə NovaWeb dünya üzrə müştəriləri olan tam xidmət göstərən veb dizayn agentliyinə çevrilib.</p>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6" data-i18n="about.story_title">Our Story</h3>
+                    <p class="text-gray-700 mb-6" data-i18n="about.story_p1">NovaWeb was founded in 2020, starting as a small team of talented designers. Our goal was to create exceptional digital experiences. Today, NovaWeb has grown into a full-service web design agency with clients worldwide.</p>
 
-                    <p class="text-gray-700 mb-8">Bizim yanaşmamız innovativ texnologiyaları yaradıcı dizayn düşüncəsi ilə birləşdirərək, həm vizual baxımdan cəlbedici, həm də yüksək performanslı veb saytlar təqdim etməkdən ibarətdir.</p>
-                    
+                    <p class="text-gray-700 mb-8" data-i18n="about.story_p2">Our approach combines innovative technologies with creative design thinking to deliver websites that are both visually stunning and high-performing.</p>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8">
                         <div class="bg-white p-4 md:p-6 !rounded-xl shadow-sm hover:shadow-md transition-shadow">
                             <div class="w-10 md:w-12 h-10 md:h-12 flex items-center justify-center bg-primary/10 !rounded-full text-primary mb-3 md:mb-4">
                                 <i class="ri-palette-line ri-lg"></i>
                             </div>
-                            <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Yaradıcı Dizayn</h4>
-                            <p class="text-sm md:text-base text-gray-600">Brendinizin ruhunu əks etdirən innovativ dizaynlar</p>
+                            <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2" data-i18n="about.feature1_title">Creative Design</h4>
+                            <p class="text-sm md:text-base text-gray-600" data-i18n="about.feature1_text">Innovative designs that capture your brand's essence</p>
                         </div>
                     
                         <div class="bg-white p-4 md:p-6 !rounded-xl shadow-sm hover:shadow-md transition-shadow">
                             <div class="w-10 md:w-12 h-10 md:h-12 flex items-center justify-center bg-primary/10 !rounded-full text-primary mb-3 md:mb-4">
                                 <i class="ri-code-s-slash-line ri-lg"></i>
                             </div>
-                            <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Təmiz Kod</h4>
-                            <p class="text-sm md:text-base text-gray-600">Səmərəli və asan idarə olunan kodlarla yüksək performans</p>
+                            <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2" data-i18n="about.feature2_title">Clean Code</h4>
+                            <p class="text-sm md:text-base text-gray-600" data-i18n="about.feature2_text">High performance with efficient, maintainable code</p>
                         </div>
                     
                         <div class="bg-white p-4 md:p-6 !rounded-xl shadow-sm hover:shadow-md transition-shadow">
                             <div class="w-10 md:w-12 h-10 md:h-12 flex items-center justify-center bg-primary/10 !rounded-full text-primary mb-3 md:mb-4">
                                 <i class="ri-smartphone-line ri-lg"></i>
                             </div>
-                            <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Adaptiv Dizayn</h4>
-                            <p class="text-sm md:text-base text-gray-600">Bütün cihaz və ekran ölçülərində problemsiz istifadə təcrübəsi</p>
+                            <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2" data-i18n="about.feature3_title">Responsive Design</h4>
+                            <p class="text-sm md:text-base text-gray-600" data-i18n="about.feature3_text">Seamless experience across all devices and screen sizes</p>
                         </div>
                     
                         <div class="bg-white p-4 md:p-6 !rounded-xl shadow-sm hover:shadow-md transition-shadow">
                             <div class="w-10 md:w-12 h-10 md:h-12 flex items-center justify-center bg-primary/10 !rounded-full text-primary mb-3 md:mb-4">
                                 <i class="ri-speed-line ri-lg"></i>
                             </div>
-                            <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Yüksək Performans</h4>
-                            <p class="text-sm md:text-base text-gray-600">Sürət və SEO üçün optimallaşdırılmış ildırım sürətli saytlar</p>
+                            <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2" data-i18n="about.feature4_title">High Performance</h4>
+                            <p class="text-sm md:text-base text-gray-600" data-i18n="about.feature4_text">Lightning-fast sites optimized for speed and SEO</p>
                         </div>
                     </div>                    
                     
@@ -234,16 +242,16 @@
     <section id="works" class="py-16 md:py-20 bg-white relative">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 md:mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">İşlərimiz</h2>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Təcrübəmizi və yaradıcılığımızı nümayiş etdirən innovativ veb layihələr portfelimizi araşdırın.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="works.title">Our Works</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="works.subtitle">Explore our portfolio of innovative web projects showcasing our experience and creativity.</p>
             </div>
             
             <div class="mb-6 md:mb-8 flex justify-center fade-in">
                 <div class="inline-flex p-1 bg-gray-100 !rounded-full overflow-x-auto">
-                    <button class="work-filter-btn px-4 md:px-6 py-2 !rounded-full bg-primary text-white whitespace-nowrap" data-filter="all">Bütün Layihələr</button>
-                    <button class="work-filter-btn px-4 md:px-6 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap" data-filter="web">Veb Dizayn</button>
-                    <button class="work-filter-btn px-4 md:px-6 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap" data-filter="ecommerce">Elektron ticarət</button>
-                    <button class="work-filter-btn px-4 md:px-6 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap" data-filter="app">Mobil Proqramlar</button>
+                    <button class="work-filter-btn px-4 md:px-6 py-2 !rounded-full bg-primary text-white whitespace-nowrap" data-filter="all" data-i18n="works.filter_all">All Projects</button>
+                    <button class="work-filter-btn px-4 md:px-6 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap" data-filter="web" data-i18n="works.filter_web">Web Design</button>
+                    <button class="work-filter-btn px-4 md:px-6 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap" data-filter="ecommerce" data-i18n="works.filter_ecommerce">E-Commerce</button>
+                    <button class="work-filter-btn px-4 md:px-6 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap" data-filter="app" data-i18n="works.filter_app">Mobile Apps</button>
                 </div>
             </div>
             
@@ -260,7 +268,7 @@
                             <h3 class="text-xl md:text-2xl font-bold text-white mb-2">TechVision Website</h3>
                             <p class="text-sm md:text-base text-white/90 mb-3 md:mb-4">A modern responsive website for a leading tech company with custom animations and interactive elements.</p>
                             <div class="flex space-x-2 md:space-x-3">
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">Web Design</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.web_design">Web Design</span>
                                 <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">UI/UX</span>
                             </div>
                         </div>
@@ -279,8 +287,8 @@
                             <h3 class="text-xl md:text-2xl font-bold text-white mb-2">LuxeShop E-Commerce</h3>
                             <p class="text-sm md:text-base text-white/90 mb-3 md:mb-4">A premium e-commerce platform with seamless checkout process and personalized product recommendations.</p>
                             <div class="flex space-x-2 md:space-x-3">
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">E-Commerce</span>
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">UX Design</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.ecommerce">E-Commerce</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.ux_design">UX Design</span>
                             </div>
                         </div>
                     </div>
@@ -298,8 +306,8 @@
                             <h3 class="text-xl md:text-2xl font-bold text-white mb-2">FitTrack Mobile App</h3>
                             <p class="text-sm md:text-base text-white/90 mb-3 md:mb-4">A fitness tracking mobile application with personalized workout plans and progress analytics.</p>
                             <div class="flex space-x-2 md:space-x-3">
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">Mobile App</span>
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">UI Design</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.mobile_app">Mobile App</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.ui_design">UI Design</span>
                             </div>
                         </div>
                     </div>
@@ -317,7 +325,7 @@
                             <h3 class="text-xl md:text-2xl font-bold text-white mb-2">FinServe Corporate Site</h3>
                             <p class="text-sm md:text-base text-white/90 mb-3 md:mb-4">A professional website for a financial services firm with interactive data visualization and secure client portal.</p>
                             <div class="flex space-x-2 md:space-x-3">
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">Web Design</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.web_design">Web Design</span>
                                 <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">Corporate</span>
                             </div>
                         </div>
@@ -336,8 +344,8 @@
                             <h3 class="text-xl md:text-2xl font-bold text-white mb-2">TastyBites Food Platform</h3>
                             <p class="text-sm md:text-base text-white/90 mb-3 md:mb-4">A food delivery platform with real-time order tracking and personalized restaurant recommendations.</p>
                             <div class="flex space-x-2 md:space-x-3">
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">E-Commerce</span>
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">App Design</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.ecommerce">E-Commerce</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.app_design">App Design</span>
                             </div>
                         </div>
                     </div>
@@ -355,8 +363,8 @@
                             <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Wanderlust Travel App</h3>
                             <p class="text-sm md:text-base text-white/90 mb-3 md:mb-4">A comprehensive travel booking application with personalized itineraries and local experience recommendations.</p>
                             <div class="flex space-x-2 md:space-x-3">
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">Mobile App</span>
-                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full">UX Design</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.mobile_app">Mobile App</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/20 text-white text-xs md:text-sm !rounded-full" data-i18n="works.ux_design">UX Design</span>
                             </div>
                         </div>
                     </div>
@@ -365,7 +373,7 @@
             
             <div class="text-center mt-8 md:mt-12 fade-in">
                 <a href="#contact" class="inline-flex items-center px-6 md:px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-all transform hover:-translate-y-1 whitespace-nowrap">
-                    <span>Layihənizə başlayın</span>
+                    <span data-i18n="works.start_project">Start Your Project</span>
                     <i class="ri-arrow-right-line ri-lg ml-2"></i>
                 </a>
             </div>
@@ -376,8 +384,8 @@
     <section id="certifications" class="py-16 md:py-20 bg-gray-50 relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 md:mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ekspertiza və Sertifikatlarımız</h2>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Peşəkar nailiyyətlərimiz və sənayedə tanınmamızla fəxr edirik.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="certifications.title">Expertise & Certifications</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="certifications.subtitle">We take pride in our professional achievements and industry recognition.</p>
             </div>
             
             <div class="mb-12 md:mb-16 fade-in">
@@ -388,7 +396,7 @@
                         </div>
                         <div>
                             <div class="text-3xl md:text-4xl font-bold text-gray-900" id="experience-counter">0</div>
-                            <div class="text-gray-600">İllərin Təcrübəsi</div>
+                            <div class="text-gray-600" data-i18n="certifications.years_experience">Years of Experience</div>
                         </div>
                     </div>
                 </div>
@@ -399,7 +407,7 @@
                             <i class="ri-award-line ri-xl md:ri-2x"></i>
                         </div>
                         <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Google Partners</h4>
-                        <p class="text-gray-600">Sertifikatlı Tərəfdaş</p>
+                        <p class="text-gray-600" data-i18n="certifications.google_partners">Certified Partner</p>
                     </div>
                     
                     <div class="bg-white p-4 md:p-6 !rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
@@ -407,7 +415,7 @@
                             <i class="ri-microsoft-line ri-xl md:ri-2x"></i>
                         </div>
                         <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Microsoft</h4>
-                        <p class="text-gray-600">Həll Təchizatçı</p>
+                        <p class="text-gray-600" data-i18n="certifications.microsoft">Solution Provider</p>
                     </div>
                     
                     <div class="bg-white p-4 md:p-6 !rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
@@ -415,7 +423,7 @@
                             <i class="ri-amazon-line ri-xl md:ri-2x"></i>
                         </div>
                         <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">AWS</h4>
-                        <p class="text-gray-600">Sertifikatlı Developer</p>
+                        <p class="text-gray-600" data-i18n="certifications.aws">Certified Developer</p>
                     </div>
                     
                     <div class="bg-white p-4 md:p-6 !rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
@@ -423,13 +431,13 @@
                             <i class="ri-adobe-line ri-xl md:ri-2x"></i>
                         </div>
                         <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Adobe</h4>
-                        <p class="text-gray-600">Yaradıcı tərəfdaş</p>
+                        <p class="text-gray-600" data-i18n="certifications.adobe">Creative Partner</p>
                     </div>
                 </div>
             </div>
             
             <div class="fade-in">
-                <h3 class="text-xl md:text-2xl font-bold text-gray-900 text-center mb-6 md:mb-8">Yol Xəritəmiz</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 text-center mb-6 md:mb-8" data-i18n="certifications.roadmap_title">Our Roadmap</h3>
                 
                 <div class="relative">
                     <!-- Timeline line -->
@@ -440,8 +448,8 @@
                         <!-- Item 1 -->
                         <div class="relative flex flex-col md:flex-row justify-between items-center mb-12 md:mb-16 fade-in">
                             <div class="w-full md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0">
-                                <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">NovaWeb Təsis Edilməsi</h4>
-                                <p class="text-gray-600 mb-2">2 ehtiraslı dizaynerdən ibarət kiçik bir komanda ilə başladı</p>
+                                <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2" data-i18n="certifications.timeline1_title">NovaWeb Founded</h4>
+                                <p class="text-gray-600 mb-2" data-i18n="certifications.timeline1_text">Started with a small team of 2 passionate designers</p>
                                 <div class="text-primary font-medium">2020</div>
                             </div>
                             
@@ -473,8 +481,8 @@
                             </div>
                             
                             <div class="w-full md:w-5/12 md:pl-8 order-2 md:order-none">
-                                <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">İlk işimiz</h4>
-                                <p class="text-gray-600 mb-2">Canary Travel səyahət şirkəti ilə əməkdaşlıq </p>
+                                <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2" data-i18n="certifications.timeline2_title">First Major Project</h4>
+                                <p class="text-gray-600 mb-2" data-i18n="certifications.timeline2_text">Collaboration with Canary Travel company</p>
                                 <div class="text-primary font-medium">2021</div>
                             </div>
                         </div>
@@ -482,8 +490,8 @@
                         <!-- Item 3 -->
                         <div class="relative flex flex-col md:flex-row justify-between items-center mb-12 md:mb-16 fade-in">
                             <div class="w-full md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0">
-                                <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">SMM İşçisi</h4>
-                                <p class="text-gray-600 mb-2">Abdullayev İsmayıl ilə razılıq</p>
+                                <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2" data-i18n="certifications.timeline3_title">SMM Specialist</h4>
+                                <p class="text-gray-600 mb-2" data-i18n="certifications.timeline3_text">Agreement with Ismayil Abdullayev</p>
                                 <div class="text-primary font-medium">2023</div>
                             </div>
                             
@@ -515,8 +523,8 @@
                             </div>
                             
                             <div class="w-full md:w-5/12 md:pl-8 order-2 md:order-none">
-                                <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Bu gün</h4>
-                                <p class="text-gray-600 mb-2">10+ peşəkar heyət</p>
+                                <h4 class="text-lg md:text-xl font-semibold text-gray-900 mb-2" data-i18n="certifications.timeline4_title">Today</h4>
+                                <p class="text-gray-600 mb-2" data-i18n="certifications.timeline4_text">10+ professional team members</p>
                                 <div class="text-primary font-medium">2025</div>
                             </div>
                         </div>
@@ -545,8 +553,8 @@
         
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-12 md:mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Əlaqə saxlayın</h2>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">Növbəti layihənizə başlamağa hazırsınız? Pulsuz konsultasiya üçün bu gün bizimlə əlaqə saxlayın.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact.title">Contact Us</h2>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto" data-i18n="contact.subtitle">Ready to start your next project? Get in touch today for a free consultation.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
@@ -554,43 +562,43 @@
                     <form id="contact-form" class="space-y-4 md:space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             <div class="relative">
-                                <input type="text" id="name" class="w-full bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Adınız" required>
-                                <label for="name" class="sr-only">Adınız</label>
+                                <input type="text" id="name" class="w-full bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Your Name" data-i18n-placeholder="contact.form_name" required>
+                                <label for="name" class="sr-only" data-i18n="contact.form_name">Your Name</label>
                             </div>
                             
                             <div class="relative">
-                                <input type="email" id="email" class="w-full bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Emailiniz" required>
-                                <label for="email" class="sr-only">Emailiniz</label>
+                                <input type="email" id="email" class="w-full bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Your Email" data-i18n-placeholder="contact.form_email" required>
+                                <label for="email" class="sr-only" data-i18n="contact.form_email">Your Email</label>
                             </div>
                         </div>
                         
                         <div class="relative">
-                            <input type="text" id="subject" class="w-full bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Mövzu" required>
-                            <label for="subject" class="sr-only">Mövzu</label>
+                            <input type="text" id="subject" class="w-full bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Subject" data-i18n-placeholder="contact.form_subject" required>
+                            <label for="subject" class="sr-only" data-i18n="contact.form_subject">Subject</label>
                         </div>
                         
                         <div class="relative">
-                            <textarea id="message" rows="5" class="w-full bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Mesajınız" required></textarea>
-                            <label for="message" class="sr-only">Mesajınız</label>
+                            <textarea id="message" rows="5" class="w-full bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Your Message" data-i18n-placeholder="contact.form_message" required></textarea>
+                            <label for="message" class="sr-only" data-i18n="contact.form_message">Your Message</label>
                         </div>
                         
                         <div class="flex items-center">
                             <label class="custom-checkbox text-gray-300 text-sm md:text-base">
                                 <input type="checkbox" required>
                                 <span class="checkmark"></span>
-                                Mən məxfilik siyasəti və xidmət şərtləri ilə razıyam
+                                <span data-i18n="contact.form_agree">I agree to the privacy policy and terms of service</span>
                             </label>
                         </div>
                         
                         <button type="submit" class="w-full px-6 md:px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-all transform hover:-translate-y-1 whitespace-nowrap">
-                            <span>Göndər</span>
+                            <span data-i18n="contact.form_submit">Send Message</span>
                         </button>
                     </form>
                 </div>
                 
                 <div class="space-y-6 md:space-y-8 fade-in">
                     <div>
-                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">Əlaqə məlumatı</h3>
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6" data-i18n="contact.info_title">Contact Information</h3>
                         
                         <div class="space-y-3 md:space-y-4">
                             <div class="flex items-start">
@@ -598,8 +606,8 @@
                                     <i class="ri-map-pin-line ri-lg"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium mb-1">Məkanımız</h4>
-                                    <p class="text-sm md:text-base text-gray-300">Koroğlu Rəhimov 70, Bakı, Azərbaycan</p>
+                                    <h4 class="font-medium mb-1" data-i18n="contact.location">Our Location</h4>
+                                    <p class="text-sm md:text-base text-gray-300">Koroğlu Rəhimov 70, Baku, Azerbaijan</p>
                                 </div>
                             </div>
                             
@@ -608,8 +616,8 @@
                                     <i class="ri-mail-line ri-lg"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium mb-1">Bizə e-poçt göndərin</h4>
-                                    <p class="text-sm md:text-base text-gray-300">info@nnovaweb.com</p>
+                                    <h4 class="font-medium mb-1" data-i18n="contact.email_us">Email Us</h4>
+                                    <p class="text-sm md:text-base text-gray-300">info@novaweb.com</p>
                                     <p class="text-sm md:text-base text-gray-300">support@novaweb.com</p>
                                 </div>
                             </div>
@@ -619,7 +627,7 @@
                                     <i class="ri-phone-line ri-lg"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium mb-1">Bizə Zəng Edin</h4>
+                                    <h4 class="font-medium mb-1" data-i18n="contact.call_us">Call Us</h4>
                                     <p class="text-sm md:text-base text-gray-300">+994 (99) 224-12-88</p>
                                     <p class="text-sm md:text-base text-gray-300">+994 (55) 364-02-88</p>
                                 </div>
@@ -628,7 +636,7 @@
                     </div>
                     
                     <div>
-                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">Bizi İzləyin</h3>
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6" data-i18n="contact.follow_us">Follow Us</h3>
                         
                         <div class="flex space-x-3 md:space-x-4">
                             <a href="#" class="w-10 md:w-12 h-10 md:h-12 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
@@ -650,7 +658,7 @@
                     </div>
                     
                     <div>
-                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">Məkanımız</h3>
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6" data-i18n="contact.our_location">Our Location</h3>
                         <div class="w-full h-48 md:h-64 !rounded-xl overflow-hidden" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;"></div>
                     </div>
                 </div>
@@ -659,12 +667,12 @@
             <div class="mt-12 md:mt-20 pt-8 md:pt-12 border-t border-gray-800 fade-in">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                     <div>
-                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Bülletenimizə Abunə olun</h3>
-                        <p class="text-sm md:text-base text-gray-300 mb-4 md:mb-6">Ən son xəbərlərimiz, məqalələrimiz və xüsusi təkliflərimizdən xəbərdar olun.</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4" data-i18n="contact.newsletter_title">Subscribe to Our Newsletter</h3>
+                        <p class="text-sm md:text-base text-gray-300 mb-4 md:mb-6" data-i18n="contact.newsletter_text">Stay updated with our latest news, articles and special offers.</p>
                         
                         <form class="flex flex-wrap md:flex-nowrap gap-3 md:gap-4">
-                            <input type="email" class="flex-grow bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Emailiniz" required>
-                            <button type="submit" class="px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Abunə olun</button>
+                            <input type="email" class="flex-grow bg-gray-800 border-none !rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50" placeholder="Your Email" data-i18n-placeholder="contact.form_email" required>
+                            <button type="submit" class="px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap" data-i18n="contact.newsletter_button">Subscribe</button>
                         </form>
                     </div>
                     
@@ -693,13 +701,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
                 <div>
                     <a href="#home" class="font-['Pacifico'] text-2xl md:text-3xl text-primary inline-block mb-4 md:mb-6">NovaWeb</a>
-                    <p class="text-sm md:text-base text-gray-400 mb-4 md:mb-6">Yenilikçi dizayn və inkişaf həlləri vasitəsilə müstəsna rəqəmsal təcrübələr yaratmaq.</p>
+                    <p class="text-sm md:text-base text-gray-400 mb-4 md:mb-6" data-i18n="footer.description">Creating exceptional digital experiences through innovative design and development solutions.</p>
                     <div class="flex space-x-3 md:space-x-4">
                         <a href="https://www.instagram.com/novaweb_az/" class="text-gray-400 hover:text-primary transition-colors">
                             <i class="ri-instagram-fill ri-lg"></i>
                         </a>
                         <a href="https://www.whatsapp.com/catalog/994992241288/?app_absent=0" class="text-gray-400 hover:text-primary transition-colors">
-                            <i class="ri-whatsapp-x-fill ri-lg"></i>
+                            <i class="ri-whatsapp-fill ri-lg"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/%C3%BClvi-abbasl%C4%B1-59b4682a8/" class="text-gray-400 hover:text-primary transition-colors">
                             <i class="ri-linkedin-fill ri-lg"></i>
@@ -708,37 +716,37 @@
                 </div>
                 
                 <div>
-                    <h4 class="text-lg md:text-xl font-bold mb-4 md:mb-6">Sürətli Linklər</h4>
+                    <h4 class="text-lg md:text-xl font-bold mb-4 md:mb-6" data-i18n="footer.quick_links">Quick Links</h4>
                     <ul class="space-y-2 md:space-y-3">
-                        <li><a href="#home" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Ana səhifə</a></li>
-                        <li><a href="#about" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Haqqımızda</a></li>
-                        <li><a href="#works" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">İşlərimiz</a></li>
-                        <li><a href="#certifications" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Sertifikasiyalar</a></li>
-                        <li><a href="#blog" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Blog</a></li>
-                        <li><a href="#contact" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Əlaqə</a></li>
+                        <li><a href="#home" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#about" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="nav.about">About</a></li>
+                        <li><a href="#works" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="nav.works">Works</a></li>
+                        <li><a href="#certifications" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="nav.certifications">Certifications</a></li>
+                        <li><a href="#blog" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="#contact" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg md:text-xl font-bold mb-4 md:mb-6">Our Services</h4>
+                    <h4 class="text-lg md:text-xl font-bold mb-4 md:mb-6" data-i18n="footer.our_services">Our Services</h4>
                     <ul class="space-y-2 md:space-y-3">
-                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Veb Dizayn</a></li>
-                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Veb İnkişafı</a></li>
-                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Elektron Ticarət Həlləri</a></li>
-                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Mobil Proqram İnkişafı</a></li>
-                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">UI/UX Dizayn</a></li>
-                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors">Rəqəmsal Marketinq</a></li>
+                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="footer.service1">Web Design</a></li>
+                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="footer.service2">Web Development</a></li>
+                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="footer.service3">E-Commerce Solutions</a></li>
+                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="footer.service4">Mobile App Development</a></li>
+                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="footer.service5">UI/UX Design</a></li>
+                        <li><a href="#" class="text-sm md:text-base text-gray-400 hover:text-primary transition-colors" data-i18n="footer.service6">Digital Marketing</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg md:text-xl font-bold mb-4 md:mb-6">Əlaqə məlumatı</h4>
+                    <h4 class="text-lg md:text-xl font-bold mb-4 md:mb-6" data-i18n="footer.contact_info">Contact Info</h4>
                     <ul class="space-y-3 md:space-y-4">
                         <li class="flex items-start">
                             <div class="w-4 md:w-5 h-4 md:h-5 flex items-center justify-center text-primary mr-2 md:mr-3 mt-1">
                                 <i class="ri-map-pin-line"></i>
                             </div>
-                            <span class="text-sm md:text-base text-gray-400">Koroğlu Rəhimov 70, Bakı, Azərbaycan</span>
+                            <span class="text-sm md:text-base text-gray-400">Koroğlu Rəhimov 70, Baku, Azerbaijan</span>
                         </li>
                         <li class="flex items-start">
                             <div class="w-4 md:w-5 h-4 md:h-5 flex items-center justify-center text-primary mr-2 md:mr-3 mt-1">
@@ -762,7 +770,7 @@
                             <div class="w-4 md:w-5 h-4 md:h-5 flex items-center justify-center text-primary mr-2 md:mr-3 mt-1">
                                 <i class="ri-time-line"></i>
                             </div>
-                            <span class="text-sm md:text-base text-gray-400">7/24</span>
+                            <span class="text-sm md:text-base text-gray-400" data-i18n="footer.hours">24/7</span>
                         </li>
                     </ul>
                 </div>
@@ -772,10 +780,10 @@
                 <p class="text-xs md:text-sm text-gray-400 text-center md:text-left mb-3 md:mb-0">© 2025 NovaWeb. All rights reserved.</p>
                 
                 <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-                    <a href="#" class="text-xs md:text-sm text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-xs md:text-sm text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
-                    <a href="#" class="text-xs md:text-sm text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
-                    <a href="#" class="text-xs md:text-sm text-gray-400 hover:text-primary transition-colors">Sitemap</a>
+                    <a href="#" class="text-xs md:text-sm text-gray-400 hover:text-primary transition-colors" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" class="text-xs md:text-sm text-gray-400 hover:text-primary transition-colors" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="#" class="text-xs md:text-sm text-gray-400 hover:text-primary transition-colors" data-i18n="footer.cookie">Cookie Policy</a>
+                    <a href="#" class="text-xs md:text-sm text-gray-400 hover:text-primary transition-colors" data-i18n="footer.sitemap">Sitemap</a>
                 </div>
             </div>
         </div>
@@ -785,6 +793,216 @@
     <button id="back-to-top" class="fixed bottom-6 md:bottom-8 right-6 md:right-8 w-10 md:w-12 h-10 md:h-12 bg-primary text-white !rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50">
         <i class="ri-arrow-up-line ri-lg"></i>
     </button>
+
+    <!-- Language Data -->
+    <script id="language-data">
+        const translations = {
+            en: {
+                // Navigation
+                "nav.home": "Home",
+                "nav.about": "About",
+                "nav.works": "Works",
+                "nav.certifications": "Certifications",
+                "nav.blog": "Blog",
+                "nav.contact": "Contact",
+                
+                // Hero Section
+                "hero.title": "Creating Digital Experiences",
+                "hero.subtitle": "We transform ideas into exceptional web experiences. Our team of experts combines creativity and technology to create stunning websites that stand out.",
+                "hero.button1": "View Our Work",
+                "hero.button2": "Get in Touch",
+                
+                // About Section
+                "about.title": "Who We Are",
+                "about.subtitle": "Passionate designers and developers creating innovative digital solutions since 2020.",
+                "about.image_caption": "Our creative team working together",
+                "about.happy_clients": "Happy Clients",
+                "about.completed_projects": "Completed Projects",
+                "about.story_title": "Our Story",
+                "about.story_p1": "NovaWeb was founded in 2020, starting as a small team of talented designers. Our goal was to create exceptional digital experiences. Today, NovaWeb has grown into a full-service web design agency with clients worldwide.",
+                "about.story_p2": "Our approach combines innovative technologies with creative design thinking to deliver websites that are both visually stunning and high-performing.",
+                "about.feature1_title": "Creative Design",
+                "about.feature1_text": "Innovative designs that capture your brand's essence",
+                "about.feature2_title": "Clean Code",
+                "about.feature2_text": "High performance with efficient, maintainable code",
+                "about.feature3_title": "Responsive Design",
+                "about.feature3_text": "Seamless experience across all devices and screen sizes",
+                "about.feature4_title": "High Performance",
+                "about.feature4_text": "Lightning-fast sites optimized for speed and SEO",
+                
+                // Works Section
+                "works.title": "Our Works",
+                "works.subtitle": "Explore our portfolio of innovative web projects showcasing our experience and creativity.",
+                "works.filter_all": "All Projects",
+                "works.filter_web": "Web Design",
+                "works.filter_ecommerce": "E-Commerce",
+                "works.filter_app": "Mobile Apps",
+                "works.web_design": "Web Design",
+                "works.ecommerce": "E-Commerce",
+                "works.mobile_app": "Mobile App",
+                "works.ui_design": "UI Design",
+                "works.ux_design": "UX Design",
+                "works.app_design": "App Design",
+                "works.start_project": "Start Your Project",
+                
+                // Certifications Section
+                "certifications.title": "Expertise & Certifications",
+                "certifications.subtitle": "We take pride in our professional achievements and industry recognition.",
+                "certifications.years_experience": "Years of Experience",
+                "certifications.google_partners": "Certified Partner",
+                "certifications.microsoft": "Solution Provider",
+                "certifications.aws": "Certified Developer",
+                "certifications.adobe": "Creative Partner",
+                "certifications.roadmap_title": "Our Roadmap",
+                "certifications.timeline1_title": "NovaWeb Founded",
+                "certifications.timeline1_text": "Started with a small team of 2 passionate designers",
+                "certifications.timeline2_title": "First Major Project",
+                "certifications.timeline2_text": "Collaboration with Canary Travel company",
+                "certifications.timeline3_title": "SMM Specialist",
+                "certifications.timeline3_text": "Agreement with Ismayil Abdullayev",
+                "certifications.timeline4_title": "Today",
+                "certifications.timeline4_text": "10+ professional team members",
+                
+                // Contact Section
+                "contact.title": "Contact Us",
+                "contact.subtitle": "Ready to start your next project? Get in touch today for a free consultation.",
+                "contact.form_name": "Your Name",
+                "contact.form_email": "Your Email",
+                "contact.form_subject": "Subject",
+                "contact.form_message": "Your Message",
+                "contact.form_agree": "I agree to the privacy policy and terms of service",
+                "contact.form_submit": "Send Message",
+                "contact.info_title": "Contact Information",
+                "contact.location": "Our Location",
+                "contact.email_us": "Email Us",
+                "contact.call_us": "Call Us",
+                "contact.follow_us": "Follow Us",
+                "contact.our_location": "Our Location",
+                "contact.newsletter_title": "Subscribe to Our Newsletter",
+                "contact.newsletter_text": "Stay updated with our latest news, articles and special offers.",
+                "contact.newsletter_button": "Subscribe",
+                
+                // Footer
+                "footer.description": "Creating exceptional digital experiences through innovative design and development solutions.",
+                "footer.quick_links": "Quick Links",
+                "footer.our_services": "Our Services",
+                "footer.service1": "Web Design",
+                "footer.service2": "Web Development",
+                "footer.service3": "E-Commerce Solutions",
+                "footer.service4": "Mobile App Development",
+                "footer.service5": "UI/UX Design",
+                "footer.service6": "Digital Marketing",
+                "footer.contact_info": "Contact Info",
+                "footer.hours": "24/7",
+                "footer.privacy": "Privacy Policy",
+                "footer.terms": "Terms of Service",
+                "footer.cookie": "Cookie Policy",
+                "footer.sitemap": "Sitemap"
+            },
+            az: {
+                // Navigation
+                "nav.home": "Ana səhifə",
+                "nav.about": "Haqqımızda",
+                "nav.works": "İşlərimiz",
+                "nav.certifications": "Sertifikasiyalar",
+                "nav.blog": "Blog",
+                "nav.contact": "Əlaqə",
+                
+                // Hero Section
+                "hero.title": "Rəqəmsal Təcrübələrin Yaradılması",
+                "hero.subtitle": "Biz ideyaları müstəsna veb təcrübələrinə çeviririk. Mütəxəssislərdən ibarət komandamız diqqət çəkən vebsaytlar yaratmaq üçün yaradıcılığı və texnologiyanı birləşdirir.",
+                "hero.button1": "İşimizə Baxın",
+                "hero.button2": "Əlaqə saxlayın",
+                
+                // About Section
+                "about.title": "Biz Kimik",
+                "about.subtitle": "2020-ci ildən bəri innovativ rəqəmsal həllər yaradan ehtiraslı dizaynerlər və tərtibatçılar.",
+                "about.image_caption": "Yaradıcı beyinlərdən ibarət komandamız birlikdə işləyir",
+                "about.happy_clients": "Xoşbəxt Müştərilər",
+                "about.completed_projects": "Tamamlanmış Layihələr",
+                "about.story_title": "Bizim Hekayəmiz",
+                "about.story_p1": "NovaWeb 2020-ci ildə yaradılıb və fəaliyyətinə istedadlı dizaynerlərdən ibarət kiçik bir komanda kimi başlayıb. Məqsədimiz – istisna rəqəmsal təcrübələr yaratmaq idi. Bu gün isə NovaWeb dünya üzrə müştəriləri olan tam xidmət göstərən veb dizayn agentliyinə çevrilib.",
+                "about.story_p2": "Bizim yanaşmamız innovativ texnologiyaları yaradıcı dizayn düşüncəsi ilə birləşdirərək, həm vizual baxımdan cəlbedici, həm də yüksək performanslı veb saytlar təqdim etməkdən ibarətdir.",
+                "about.feature1_title": "Yaradıcı Dizayn",
+                "about.feature1_text": "Brendinizin ruhunu əks etdirən innovativ dizaynlar",
+                "about.feature2_title": "Təmiz Kod",
+                "about.feature2_text": "Səmərəli və asan idarə olunan kodlarla yüksək performans",
+                "about.feature3_title": "Adaptiv Dizayn",
+                "about.feature3_text": "Bütün cihaz və ekran ölçülərində problemsiz istifadə təcrübəsi",
+                "about.feature4_title": "Yüksək Performans",
+                "about.feature4_text": "Sürət və SEO üçün optimallaşdırılmış ildırım sürətli saytlar",
+                
+                // Works Section
+                "works.title": "İşlərimiz",
+                "works.subtitle": "Təcrübəmizi və yaradıcılığımızı nümayiş etdirən innovativ veb layihələr portfelimizi araşdırın.",
+                "works.filter_all": "Bütün Layihələr",
+                "works.filter_web": "Veb Dizayn",
+                "works.filter_ecommerce": "Elektron ticarət",
+                "works.filter_app": "Mobil Proqramlar",
+                "works.web_design": "Veb Dizayn",
+                "works.ecommerce": "Elektron ticarət",
+                "works.mobile_app": "Mobil Proqram",
+                "works.ui_design": "UI Dizayn",
+                "works.ux_design": "UX Dizayn",
+                "works.app_design": "Proqram Dizaynı",
+                "works.start_project": "Layihənizə başlayın",
+                
+                // Certifications Section
+                "certifications.title": "Ekspertiza və Sertifikatlarımız",
+                "certifications.subtitle": "Peşəkar nailiyyətlərimiz və sənayedə tanınmamızla fəxr edirik.",
+                "certifications.years_experience": "İllərin Təcrübəsi",
+                "certifications.google_partners": "Sertifikatlı Tərəfdaş",
+                "certifications.microsoft": "Həll Təchizatçı",
+                "certifications.aws": "Sertifikatlı Developer",
+                "certifications.adobe": "Yaradıcı tərəfdaş",
+                "certifications.roadmap_title": "Yol Xəritəmiz",
+                "certifications.timeline1_title": "NovaWeb Təsis Edilməsi",
+                "certifications.timeline1_text": "2 ehtiraslı dizaynerdən ibarət kiçik bir komanda ilə başladı",
+                "certifications.timeline2_title": "İlk işimiz",
+                "certifications.timeline2_text": "Canary Travel səyahət şirkəti ilə əməkdaşlıq",
+                "certifications.timeline3_title": "SMM İşçisi",
+                "certifications.timeline3_text": "Abdullayev İsmayıl ilə razılıq",
+                "certifications.timeline4_title": "Bu gün",
+                "certifications.timeline4_text": "10+ peşəkar heyət",
+                
+                // Contact Section
+                "contact.title": "Əlaqə saxlayın",
+                "contact.subtitle": "Növbəti layihənizə başlamağa hazırsınız? Pulsuz konsultasiya üçün bu gün bizimlə əlaqə saxlayın.",
+                "contact.form_name": "Adınız",
+                "contact.form_email": "Emailiniz",
+                "contact.form_subject": "Mövzu",
+                "contact.form_message": "Mesajınız",
+                "contact.form_agree": "Mən məxfilik siyasəti və xidmət şərtləri ilə razıyam",
+                "contact.form_submit": "Göndər",
+                "contact.info_title": "Əlaqə məlumatı",
+                "contact.location": "Məkanımız",
+                "contact.email_us": "Bizə e-poçt göndərin",
+                "contact.call_us": "Bizə Zəng Edin",
+                "contact.follow_us": "Bizi İzləyin",
+                "contact.our_location": "Məkanımız",
+                "contact.newsletter_title": "Bülletenimizə Abunə olun",
+                "contact.newsletter_text": "Ən son xəbərlərimiz, məqalələrimiz və xüsusi təkliflərimizdən xəbərdar olun.",
+                "contact.newsletter_button": "Abunə olun",
+                
+                // Footer
+                "footer.description": "Yenilikçi dizayn və inkişaf həlləri vasitəsilə müstəsna rəqəmsal təcrübələr yaratmaq.",
+                "footer.quick_links": "Sürətli Linklər",
+                "footer.our_services": "Our Services",
+                "footer.service1": "Veb Dizayn",
+                "footer.service2": "Veb İnkişafı",
+                "footer.service3": "Elektron Ticarət Həlləri",
+                "footer.service4": "Mobil Proqram İnkişafı",
+                "footer.service5": "UI/UX Dizayn",
+                "footer.service6": "Rəqəmsal Marketinq",
+                "footer.contact_info": "Əlaqə məlumatı",
+                "footer.hours": "7/24",
+                "footer.privacy": "Privacy Policy",
+                "footer.terms": "Terms of Service",
+                "footer.cookie": "Cookie Policy",
+                "footer.sitemap": "Sitemap"
+            }
+        };
+    </script>
 
     <!-- Scripts -->
     <script id="navigation-script">
@@ -847,14 +1065,18 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Typing animation
             const typingElement = document.getElementById('typing-text');
-            const phrases = ['Rəqəmsal Təcrübələrin Yaradılması', 'İnnovativ veb saytların qurulması', 'Çarpıcı Dizaynların Yaradılması', 'Fərdi Həllərin İnkişafı'];
+            const phrases = {
+                en: ['Creating Digital Experiences', 'Building Innovative Websites', 'Crafting Stunning Designs', 'Developing Custom Solutions'],
+                az: ['Rəqəmsal Təcrübələrin Yaradılması', 'İnnovativ veb saytların qurulması', 'Çarpıcı Dizaynların Yaradılması', 'Fərdi Həllərin İnkişafı']
+            };
+            let currentLang = 'en';
             let phraseIndex = 0;
             let charIndex = 0;
             let isDeleting = false;
             let typingSpeed = 100;
             
             function typeText() {
-                const currentPhrase = phrases[phraseIndex];
+                const currentPhrase = phrases[currentLang][phraseIndex];
                 
                 if (isDeleting) {
                     typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
@@ -871,7 +1093,7 @@
                     typingSpeed = 1500; // Pause at end of phrase
                 } else if (isDeleting && charIndex === 0) {
                     isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    phraseIndex = (phraseIndex + 1) % phrases[currentLang].length;
                     typingSpeed = 500; // Pause before typing next phrase
                 }
                 
@@ -1082,14 +1304,14 @@
                     const message = document.getElementById('message').value;
                     
                     if (!name || !email || !subject || !message) {
-                        alert('Zəhmət olmasa bütün xanaları doldurun.');
+                        alert(document.querySelector('[data-i18n="contact.form_validation"]').textContent || 'Please fill in all fields.');
                         return;
                     }
                     
                     // Email validation
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
-                        alert('Zəhmət olmasa düzgün email ünvanı yazın.');
+                        alert(document.querySelector('[data-i18n="contact.email_validation"]').textContent || 'Please enter a valid email address.');
                         return;
                     }
                     
@@ -1098,11 +1320,11 @@
                     const originalText = submitButton.innerHTML;
                     
                     submitButton.disabled = true;
-                    submitButton.innerHTML = '<span>Göndərilir...</span>';
+                    submitButton.innerHTML = '<span>' + (document.querySelector('[data-i18n="contact.form_sending"]').textContent || 'Sending...') + '</span>';
                     
                     setTimeout(function() {
                         contactForm.reset();
-                        submitButton.innerHTML = '<span>Mesaj Göndərildi!</span>';
+                        submitButton.innerHTML = '<span>' + (document.querySelector('[data-i18n="contact.form_sent"]').textContent || 'Message Sent!') + '</span>';
                         
                         setTimeout(function() {
                             submitButton.disabled = false;
@@ -1111,6 +1333,60 @@
                     }, 1500);
                 });
             }
+        });
+    </script>
+
+    <script id="language-toggle-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggles = document.querySelectorAll('.language-toggle');
+            let currentLang = 'en';
+            
+            // Initialize translations
+            function loadLanguage(lang) {
+                currentLang = lang;
+                const elements = document.querySelectorAll('[data-i18n], [data-i18n-placeholder]');
+                
+                elements.forEach(element => {
+                    const key = element.getAttribute('data-i18n') || element.getAttribute('data-i18n-placeholder');
+                    if (translations[lang][key]) {
+                        if (element.getAttribute('data-i18n-placeholder')) {
+                            element.setAttribute('placeholder', translations[lang][key]);
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                });
+                
+                // Update active language toggle
+                languageToggles.forEach(toggle => {
+                    if (toggle.getAttribute('data-lang') === lang) {
+                        toggle.classList.add('active');
+                        toggle.classList.remove('text-gray-400');
+                        toggle.classList.add('text-primary', 'font-medium');
+                    } else {
+                        toggle.classList.remove('active');
+                        toggle.classList.add('text-gray-400');
+                        toggle.classList.remove('text-primary', 'font-medium');
+                    }
+                });
+                
+                // Update typing animation phrases
+                const typingElement = document.getElementById('typing-text');
+                typingElement.textContent = translations[lang]["hero.title"];
+            }
+            
+            // Load default language
+            loadLanguage(currentLang);
+            
+            // Language toggle event listeners
+            languageToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    if (lang !== currentLang) {
+                        loadLanguage(lang);
+                    }
+                });
+            });
         });
     </script>
 </body>
